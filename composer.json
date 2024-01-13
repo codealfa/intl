@@ -4,7 +4,12 @@
     "description": "Internationalization library powered by CLDR data.",
     "license": "MIT",
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.1",
+        "ext-bcmath": ">=8.0",
+        "phpseclib/bcmath_compat": "^2.0"
+    },
+    "suggest": {
+        "phpseclib/bcmath_compat": "Polyfill for ext-bcmath if not installed on system"
     },
     "require-dev": {
         "phpunit/phpunit": "^10",

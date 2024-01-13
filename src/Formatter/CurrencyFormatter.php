@@ -77,9 +77,6 @@ class CurrencyFormatter implements CurrencyFormatterInterface
      */
     public function __construct(NumberFormatRepositoryInterface $numberFormatRepository, CurrencyRepositoryInterface $currencyRepository, array $defaultOptions = [])
     {
-        if (!extension_loaded('bcmath')) {
-            throw new \RuntimeException('The bcmath extension is required by CurrencyFormatter.');
-        }
         $this->validateOptions($defaultOptions);
 
         $this->numberFormatRepository = $numberFormatRepository;

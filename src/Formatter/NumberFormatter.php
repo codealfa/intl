@@ -53,9 +53,6 @@ class NumberFormatter implements NumberFormatterInterface
      */
     public function __construct(NumberFormatRepositoryInterface $numberFormatRepository, array $defaultOptions = [])
     {
-        if (!extension_loaded('bcmath')) {
-            throw new \RuntimeException('The bcmath extension is required by NumberFormatter.');
-        }
         $this->validateOptions($defaultOptions);
 
         $this->numberFormatRepository = $numberFormatRepository;
